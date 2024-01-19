@@ -22,19 +22,20 @@ class User(BaseModel):
 # posts pyndantic model
 class PostBase(BaseModel):
     image_url : str
-    imrage_url_type : str
+    image_url_type : str
     caption : str
     user_id : int
 
 class PostDisplay(BaseModel):
     id : int
     image_url : str
-    imrage_url_type : str
+    image_url_type : str
     caption : str
     timestamp : datetime
     user : User
     class Config():
         orm_mode = True
+        arbitrary_types_allowed = True
 
 
 

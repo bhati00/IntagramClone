@@ -1,6 +1,5 @@
 from .database import Base
-from sqlalchemy import Column, Integer, String
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
 
@@ -20,7 +19,7 @@ class Post(Base):
     image_url = Column(String)
     image_url_type = Column(String)
     caption = Column(String)
-    timestamp = Column(datetime)
+    timestamp = Column(DateTime)
     user_id = Column(Integer, ForeignKey(User.id))
     user = relationship('User', back_populates = ('items'))
 

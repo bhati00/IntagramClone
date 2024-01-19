@@ -1,6 +1,9 @@
-fastapi
+fastapi 
 uvicorn
 sqlalchemy
 passlib
 bcrypt
-alembica
+alembic  # library to create migrations
+python-multipart #for uploading images 
+aiofiles  #performing file operation
+python-jose #the javascript object signing and encryption technologies

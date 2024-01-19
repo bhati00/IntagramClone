@@ -1,14 +1,11 @@
 from fastapi import FastAPI
-from data import model
 from data.database import engine
-from routers import users
+from routers import users,posts
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.include_router(users.router)
+app.include_router(posts.router)
+app.mount("/images", StaticFiles(directory='images'), name = 'images')
 
-# generating our tables
-model.Base.metadata.create_all(engine)
 
-@app.get("/root")
-def root():
-    return "Hello world"
