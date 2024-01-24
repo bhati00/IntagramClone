@@ -37,6 +37,11 @@ class PostDisplay(BaseModel):
         orm_mode = True
         arbitrary_types_allowed = True
 
+class UserAuth(BaseModel):
+    id : int
+    username : str
+    email : str
+
 
 
           
