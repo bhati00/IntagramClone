@@ -8,3 +8,4 @@ python-multipart #for uploading images
 aiofiles  #performing file operation
 python-jose #the javascript object signing and encryption technologies
 more-itertools
+requests
